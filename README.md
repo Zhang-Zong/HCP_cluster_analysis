@@ -2,7 +2,7 @@
 
 All analysis is performed in Matlab (2017a) unless otherwise noted. 
 
-Neuroimaging data were extracted from HCP S90 release, placed in specific folders and organization on my drive. 
+Neuroimaging data were extracted from HCP S900 release, placed in specific folders and organization on my drive. 
 
 Data can be extracted by running:
 hcp_clus_initialize.m 
@@ -50,7 +50,7 @@ This script plots the data in Figure 2 of the paper
 
 -------
 
-The ‘agreement matrices’ (FIGURE 3) were run using the function cluster_bootstrap.m. It runs 1000 permutations of 75% of the data, rerunning the cluster solutions, and generating a probability of any two cases being in the same cluster (from 0 to 1) if both were included in the permutation. It is run from cluster solutions k from 2 to 10. 
+The â€˜agreement matricesâ€™ (FIGURE 3) were run using the function cluster_bootstrap.m. It runs 1000 permutations of 75% of the data, rerunning the cluster solutions, and generating a probability of any two cases being in the same cluster (from 0 to 1) if both were included in the permutation. It is run from cluster solutions k from 2 to 10. 
 Also calculated adjusted Rand index for each cluster solutions (using common participants) for each pair of clusters. This tells us how much overall common information/clustering is present in any two permutations. 
 To produce this data I looped through the cluster bootstrap function for modalities and values of k. This is a very computationally demanding process, results are saved to wards_agree.mat
 
